@@ -24,4 +24,4 @@ Ou execute `npm run cy:open` para abrir o Cypress em modo interativo numa janela
 
 ___
 
-Esse projeto foi desenvolvido por [Cintia](https://github.com/cintiaomaas).
+Esse projeto foi desenvolvido por [Cintia] (https://github.com/cintiaomaas).
