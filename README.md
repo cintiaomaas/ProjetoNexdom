@@ -6,7 +6,7 @@ Projeto Nexdom etapa de desafio
 
 It is required to have Node.js and npm installed to run this project.
 
-> Eu usei as versões `v16.13.2` e `8.3.2` do Node.js and npm, respectivamente. 
+> Eu usei as versões `v18.16.1` e `9.5.1` do Node.js and npm, respectivamente. 
 
 ## Instalação
 
