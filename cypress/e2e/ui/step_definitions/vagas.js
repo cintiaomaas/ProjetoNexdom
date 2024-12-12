@@ -1,3 +1,5 @@
+/// <reference types="Cypress" />
+
 import { Given, When, Then } from '@badeball/cypress-cucumber-preprocessor';
 import CarreirasPages from '../pages/CarreirasPages';
 import VagasPages from '../pages/VagasPages';

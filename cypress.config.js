@@ -1,4 +1,4 @@
-const { defineConfig } = require('cypress');
+const { defineConfig } = require('Cypress');
 const createBundler = require('@bahmutov/cypress-esbuild-preprocessor');
 const addCucumberPreprocessorPlugin = require('@badeball/cypress-cucumber-preprocessor').addCucumberPreprocessorPlugin;
 const createEsbuildPlugin = require('@badeball/cypress-cucumber-preprocessor/esbuild').createEsbuildPlugin;
@@ -17,11 +17,14 @@ module.exports = defineConfig({
 
       return config;
     },
-    specPattern: 'cypress/e2e/ui/**/*.feature',
-    baseUrl: 'https://nexdom.tec.br/', // Altere conforme sua aplicação
-    supportFile: false, // Isso pode ser alterado conforme sua estrutura
+    specPattern: ['cypress/e2e/ui/**/*.feature', 'cypress/e2e/api/**/*.feature'],
+    baseUrl: 'https://nexdom.tec.br/', 
+    supportFile: false, 
     env: {
-      stepDefinitions: 'cypress/e2e/ui/step_definitions/*.js', // Adiciona o caminho da pasta de step definitions
+      stepDefinitions: [
+        'cypress/e2e/ui/step_definitions/*.js',
+        'cypress/e2e/api/step_definitions/*.js',
+      ],
     },
   },
 });
