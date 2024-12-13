@@ -29,8 +29,6 @@ Para executar os teste de api execute o comando `npx cypress run --spec "cypress
 Para executar os teste de ui execute o comando `npx cypress run --spec "cypress/e2e/ui/**/*.feature"` para executar em modo headless ou 
 execute o comando `npx cypress open --spec "cypress/e2e/ui/**/*.feature"` para executar em modo interativo numa janela de visualização do ambiente de trabalho..
 
-
-[O token dos teste de api é valido por 60 dias]()
 ___
 
 Esse projeto foi desenvolvido por [Cintia] (https://github.com/cintiaomaas).
