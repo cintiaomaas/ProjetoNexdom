@@ -2,6 +2,7 @@ const { defineConfig } = require('Cypress');
 const createBundler = require('@bahmutov/cypress-esbuild-preprocessor');
 const addCucumberPreprocessorPlugin = require('@badeball/cypress-cucumber-preprocessor').addCucumberPreprocessorPlugin;
 const createEsbuildPlugin = require('@badeball/cypress-cucumber-preprocessor/esbuild').createEsbuildPlugin;
+require('dotenv').config();
 
 module.exports = defineConfig({
   e2e: {
@@ -11,9 +12,10 @@ module.exports = defineConfig({
       const bundler = createBundler({
         plugins: [createEsbuildPlugin(config)],
       });
-
+      
       on('file:preprocessor', bundler);
       await addCucumberPreprocessorPlugin(on, config);
+      config.env.TOKEN_API = process.env.TOKEN_API;
 
       return config;
     },

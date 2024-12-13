@@ -2,7 +2,7 @@
 
 const { Given, When, Then } = require('@badeball/cypress-cucumber-preprocessor');
 
-const token = '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';
+const token = Cypress.env('TOKEN_API');
 const apiUrl = 'https://api.github.com';
 const headers = {
   Authorization: `Bearer ${token}`,
